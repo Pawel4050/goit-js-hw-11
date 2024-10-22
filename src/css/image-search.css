@@ -1,4 +1,3 @@
-/* Ogólne style dla kontenera */
 .form-div {
     position: relative;
     width: 1440px;
@@ -13,13 +12,12 @@ form {
     align-items: flex-start;
     padding: 0;
     gap: 8px;
-
     position: absolute;
     width: 371px;
     height: 40px;
     left: calc(50% - 371px / 2);
     top: 36px;
-    
+
 }
 
 input[type="text"] {
@@ -28,17 +26,14 @@ input[type="text"] {
     background: #FFFFFF;
     border-radius: 4px;
     border: 1px solid #808080;
-
     box-sizing: border-box;
     padding-left: 8px;
-
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.04em;
-
     color: #808080;
 }
 
@@ -49,117 +44,106 @@ button {
     align-items: center;
     padding: 8px 16px;
     gap: 10px;
-
     width: 91px;
     height: 40px;
     background: #4E75FF;
     border-radius: 8px;
     border: none;
-
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.04em;
-
     color: #FFFFFF;
     cursor: pointer;
 }
 
-/* Opcjonalne: stylowanie tekstu ładowania (jeśli będzie używane w projekcie) */
 .loading-text {
     position: absolute;
     left: 41.11%;
     right: 41.11%;
     top: 21.77%;
     bottom: 73.39%;
-
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.04em;
-
     color: #2E2F42;
 }
-
-
-
 
 
 .image-info p {
     display: flex;
     flex-direction: column;
-    /* Ustawia tekst i liczbę w kolumnie */
     margin: 0;
-    /* Usunięcie domyślnych marginesów */
     font-size: 14px;
-    /* Rozmiar tekstu */
     text-align: center;
-    /* Wyśrodkowanie tekstu */
 }
 
 .gallery {
-
-
-
     display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        /* Odstęp między kartami obrazków */
-        padding: 20px;
-        /* Odstęp wewnętrzny dla galerii, aby obrazki nie dotykały krawędzi ekranu */
-        max-width: 1200px;
-        /* Ograniczenie szerokości galerii */
-        margin: 0 auto;
-        /* Wyśrodkowanie galerii na stronie */
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
 
 .image-card {
     position: relative;
     width: calc(33.333% - 10px);
-    /* 3 obrazki w rzędzie */
     box-sizing: border-box;
     border: 2px solid #ccc;
-    /* Ramka wokół obrazka */
     overflow: hidden;
 }
 
 
 .image-card img {
     width: 100%;
-    /* Dopasowanie szerokości obrazka do ramki */
     height: auto;
-    /* Zachowanie proporcji obrazu */
     display: block;
 }
 
-
-/* .image-info {
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} */
-
 .image-info {
     display: flex;
-    /* Wyświetla elementy obok siebie */
     justify-content: space-around;
-    /* Rozkłada elementy równomiernie */
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    /* Tło informacji pod obrazkiem */
     border-top: 2px solid #ccc;
-    /* Ramka górna oddzielająca od obrazka */
 }
 
 a.image-card {
     text-decoration: none;
     color: inherit;
-        /* Zachowanie koloru tekstu z otaczającego elementu */
+}
+
+
+.loader {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    /* Ukryty domyślnie */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
