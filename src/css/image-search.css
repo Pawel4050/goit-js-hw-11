@@ -2,11 +2,11 @@
 .form-div {
     position: relative;
     width: 1440px;
-    height: 496px;
+    height: 100px;
     background: #FFFFFF;
+    margin: 0 auto;
 }
 
-/* Stylizacja formularza */
 form {
     display: flex;
     flex-direction: row;
@@ -19,9 +19,9 @@ form {
     height: 40px;
     left: calc(50% - 371px / 2);
     top: 36px;
+    
 }
 
-/* Stylizacja inputa (pole wyszukiwania) */
 input[type="text"] {
     width: 272px;
     height: 40px;
@@ -42,7 +42,6 @@ input[type="text"] {
     color: #808080;
 }
 
-/* Stylizacja przycisku (Search) */
 button {
     display: flex;
     flex-direction: row;
@@ -103,10 +102,19 @@ button {
 }
 
 .gallery {
+
+
+
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    /* Odstęp między kartami */
+        flex-wrap: wrap;
+        gap: 10px;
+        /* Odstęp między kartami obrazków */
+        padding: 20px;
+        /* Odstęp wewnętrzny dla galerii, aby obrazki nie dotykały krawędzi ekranu */
+        max-width: 1200px;
+        /* Ograniczenie szerokości galerii */
+        margin: 0 auto;
+        /* Wyśrodkowanie galerii na stronie */
 }
 
 
