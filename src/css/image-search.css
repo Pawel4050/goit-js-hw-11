@@ -85,3 +85,73 @@ button {
 
     color: #2E2F42;
 }
+
+
+
+
+
+.image-info p {
+    display: flex;
+    flex-direction: column;
+    /* Ustawia tekst i liczbę w kolumnie */
+    margin: 0;
+    /* Usunięcie domyślnych marginesów */
+    font-size: 14px;
+    /* Rozmiar tekstu */
+    text-align: center;
+    /* Wyśrodkowanie tekstu */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Odstęp między kartami */
+}
+
+
+.image-card {
+    position: relative;
+    width: calc(33.333% - 10px);
+    /* 3 obrazki w rzędzie */
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    /* Ramka wokół obrazka */
+    overflow: hidden;
+}
+
+
+.image-card img {
+    width: 100%;
+    /* Dopasowanie szerokości obrazka do ramki */
+    height: auto;
+    /* Zachowanie proporcji obrazu */
+    display: block;
+}
+
+
+/* .image-info {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */
+
+.image-info {
+    display: flex;
+    /* Wyświetla elementy obok siebie */
+    justify-content: space-around;
+    /* Rozkłada elementy równomiernie */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Tło informacji pod obrazkiem */
+    border-top: 2px solid #ccc;
+    /* Ramka górna oddzielająca od obrazka */
+}
+
+a.image-card {
+    text-decoration: none;
+    color: inherit;
+        /* Zachowanie koloru tekstu z otaczającego elementu */
+}
